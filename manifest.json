@@ -1,20 +1,19 @@
 {
-    "manifest_version": 1,
-    "name": "Quizzify",
-    "version": "1.0",
-    "permissions": [
-        "contextMenus"
-    ],
-    "description": "Web extension that allows users to create a quiz based on any text data they highlight",
-  
-    "icons": {
-      "48": "icons/border-48.png"
-    },
-  
-    "content_scripts": [
-      {
-        "matches": ["*"],
-        "js": ["content.js"]
-      }
-    ]
-  }
+  "manifest_version": 2,
+  "name": "Quizzify",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "description": "Web extension that allows users to create a quiz based on any text data they highlight",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
